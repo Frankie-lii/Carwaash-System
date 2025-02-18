@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carwash Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <!-- Logo on the top left -->
+            <div class="logo">
+                <img src="images/logo.png" alt="Carwash Logo">
+            </div>
+
+            <!-- Navigation & Auth Links (Unified for desktop & mobile) -->
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#booking">Booking</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="auth-links">
+                    <a href="#signin" class="btn auth-btn">Sign In</a>
+                    <a href="#signup" class="btn auth-btn">Sign Up</a>
+                </div>
+            </nav>
+
+            <!-- Mobile Menu Icon (Hamburger) -->
+            <div class="mobile-menu-icon" id="mobile-menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+    <section id="home" class="hero">
+        <!-- Background Overlay for subtle effect -->
+        <div class="hero-overlay"></div>
+
+        <!-- Hero Content (Call-to-Action) -->
+        <div class="hero-content container">
+            <h1>Welcome to Carwash Service</h1>
+            <p>Your car, our care. Experience a premium car wash like never before.</p>
+            <a href="#booking" class="btn">Book Now</a>
+        </div>
+
+        <!-- Service Highlights -->
+        <div class="service-highlights container">
+            <h2>Our Services</h2>
+            <div class="highlights-grid">
+                <div class="highlight-item">
+                    <img src="images/basic-icon.jpg" alt="Basic Wash">
+                    <h3>Basic Wash</h3>
+                </div>
+                <div class="highlight-item">
+                    <img src="images/deluxe-icon.png" alt="Deluxe Wash">
+                    <h3>Deluxe Wash</h3>
+                </div>
+                <div class="highlight-item">
+                    <img src="images/premium-icon.png" alt="Premium Care">
+                    <h3>Premium Care</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>About Our Carwash</h2>
+
+        <div class="about-content">
+            <div class="about-text">
+                <p>At our premium carwash, we are committed to providing top-quality services with attention to detail. Our team of skilled professionals uses the latest equipment and eco-friendly products to give your vehicle the care it deserves.</p>
+                <p>Founded in 2015, we have grown to become a trusted name in the community, offering a range of services from basic washes to complete detailing and protective coatings.</p>
+            </div>
+
+            <div class="about-images">
+                <img src="images/team.jpg" alt="Our Team">
+                <img src="images/facility.jpg" alt="Our Facility">
+            </div>
+        </div>
+    </section>
+
+
+    <section id="services" class="services-section">
+        <h2>Our Services</h2>
+
+        <div class="service-container">
+            <!-- Basic Wash -->
+            <div class="service-card">
+                <img src="images/basic-wash.jpg" alt="Basic Wash">
+                <h3>Basic Wash</h3>
+                <p>Exterior wash and dry with basic cleaning.</p>
+                <span class="price">$15</span>
+            </div>
+
+            <!-- Deluxe Wash -->
+            <div class="service-card">
+                <img src="images/deluxe-wash.jpg" alt="Deluxe Wash">
+                <h3>Deluxe Wash</h3>
+                <p>Exterior and interior clean with premium wax finish.</p>
+                <span class="price">$30</span>
+            </div>
+
+            <!-- Premium Wash -->
+            <div class="service-card">
+                <img src="images/premium-wash.jpg" alt="Premium Wash">
+                <h3>Premium Wash</h3>
+                <p>Complete detailing, polishing, and protective coating.</p>
+                <span class="price">$50</span>
+            </div>
+        </div>
+
+        <!-- Before & After Comparison -->
+        <div class="comparison-container">
+            <h3>See the Difference</h3>
+            <div class="comparison-images">
+                <img src="images/before.jpg" alt="Before" class="comparison-image before">
+                <img src="images/after.jpg" alt="After" class="comparison-image after">
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section">
+        <h2>Book Your Carwash</h2>
+
+        <form class="booking-form">
+            <!-- Service Selection -->
+            <label for="service">Select Service:</label>
+            <select id="service" name="service" required>
+        <option value="basic">Basic Wash - $15</option>
+        <option value="deluxe">Deluxe Wash - $30</option>
+        <option value="premium">Premium Wash - $50</option>
+      </select>
+
+            <!-- Date and Time -->
+            <label for="date">Preferred Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Preferred Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <!-- Customer Information -->
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <button type="submit">Confirm Booking</button>
+        </form>
+    </section>
+
+
+
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+
+            <form class="contact-form" id="contact-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+
+            <div class="contact-icons">
+                <a href="tel:+123456789">📞 +123-456-789</a>
+                <a href="mailto:info@carwash.com">✉️ info@carwash.com</a>
+                <a href="#">🌐 Follow us on Social Media</a>
+            </div>
+
+            <div class="map-container">
+                <iframe src="https://maps.google.com/maps?q=carwash%20location&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="300" frameborder="0" allowfullscreen=""></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="user-feedback">
+        <div class="user-account">
+            <h2>User Account</h2>
+            <form id="user-form" enctype="multipart/form-data">
+                <label for="avatar">Upload Avatar:</label>
+                <input type="file" id="avatar" name="avatar" accept="image/*">
+
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Register</button>
+            </form>
+            <div id="user-profile" class="hidden">
+                <img id="profile-avatar" src="" alt="User Avatar">
+                <p id="profile-name"></p>
+                <p id="profile-email"></p>
+            </div>
+        </div>
+
+        <div class="feedback-section">
+            <h2>Customer Reviews</h2>
+            <div class="review">
+                <img src="images/customer1.jpg" alt="Customer 1">
+                <p>"Excellent service and very professional!"</p>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="review">
+                <img src="images/customer2.jpg" alt="Customer 2">
+                <p>"My car looks brand new after every wash."</p>
+                <div class="stars">★★★★☆</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We provide top-notch carwash services with a focus on quality and customer satisfaction. Visit us for a sparkling clean ride!</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Phone: +123-456-7890</p>
+                <p>Email: info@carwash.com</p>
+                <p>Address: 123 Carwash Ave, Clean City</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">Twitter</a>
+                <a href="#" class="social-icon">Instagram</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#booking">Booking</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Carwash. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

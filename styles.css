@@ -1,0 +1,549 @@
+/* General Styles */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+
+/* Base Header Styles */
+
+header {
+    background: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Logo */
+
+.logo img {
+    height: 50px;
+    /* Ensure the logo is very visible */
+}
+
+
+/* Navigation Menu (Unified) */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    margin: 0 10px;
+}
+
+.nav-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+    color: #28A745;
+}
+
+
+/* Auth Links */
+
+.auth-links {
+    margin-left: 20px;
+}
+
+.auth-btn {
+    margin-left: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 12px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.auth-btn:hover {
+    background: #fff;
+    color: #007BFF;
+}
+
+
+/* Mobile Menu Icon (Hamburger) */
+
+.mobile-menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.mobile-menu-icon span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 4px 0;
+    transition: all 0.3s;
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    /* Hide the regular navigation */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        /* Hidden offscreen initially */
+        width: 250px;
+        height: 100%;
+        background: #007BFF;
+        flex-direction: column;
+        padding-top: 60px;
+        transition: right 0.3s ease;
+    }
+    .nav-menu.active {
+        right: 0;
+        /* Slide in */
+    }
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-menu ul li {
+        margin: 20px 0;
+    }
+    .auth-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .auth-btn {
+        margin: 5px 0;
+    }
+    /* Show the mobile menu icon */
+    .mobile-menu-icon {
+        display: flex;
+    }
+}
+
+
+/* Hero Section */
+
+.hero {
+    position: relative;
+    background: url('images/hero-carwash.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+
+/* Overlay to enhance text readability */
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 123, 255, 0.5);
+    /* semi-transparent blue overlay */
+    z-index: 1;
+}
+
+
+/* Hero Content */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+
+/* Button Style */
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #28A745;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #218838;
+}
+
+
+/* Service Highlights Section */
+
+.service-highlights {
+    margin: 60px auto 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.service-highlights h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+
+/* Grid for Service Highlights */
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    align-items: center;
+    justify-items: center;
+}
+
+.highlight-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.highlight-item:hover {
+    transform: translateY(-5px);
+}
+
+.highlight-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.highlight-item h3 {
+    font-size: 1.1rem;
+    color: #007BFF;
+}
+
+
+/* Responsive Adjustments */
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 0;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    .service-highlights h2 {
+        font-size: 1.8rem;
+    }
+}
+
+
+/* About Section Styling */
+
+.about-section {
+    padding: 40px 20px;
+    background: #f0f9ff;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-images img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+}
+
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+
+/* Services Section Styling */
+
+.services-section {
+    padding: 40px 20px;
+    background: #f0f9ff;
+    text-align: center;
+}
+
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-card {
+    width: 300px;
+    background: #48a9c5;
+    color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+    width: 100%;
+    height: auto;
+}
+
+.service-card h3 {
+    margin: 15px 0;
+}
+
+.service-card p {
+    font-size: 14px;
+}
+
+.price {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0;
+}
+
+
+/* Before & After Comparison */
+
+.comparison-container {
+    margin-top: 40px;
+}
+
+.comparison-images {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.comparison-image {
+    width: 48%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Booking Section Styling */
+
+.booking-section {
+    padding: 40px 20px;
+    background: #d7effb;
+    text-align: center;
+}
+
+.booking-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.booking-form label {
+    font-weight: bold;
+}
+
+.booking-form input,
+.booking-form select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #48a9c5;
+}
+
+.booking-form button {
+    padding: 12px;
+    background: #48a9c5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.booking-form button:hover {
+    background: #357d91;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .comparison-images {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .service-card {
+        width: 100%;
+    }
+}
+
+
+/* Contact Section */
+
+.contact-section {
+    background: #f2f2f2;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #48a9c5;
+    border-radius: 8px;
+}
+
+.contact-form button {
+    padding: 12px 24px;
+    background: #48a9c5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.contact-icons a {
+    color: #48a9c5;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.map-container {
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .contact-icons {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+
+/* User Account & Feedback Section */
+
+#user-feedback {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px;
+}
+
+.user-account,
+.feedback-section {
+    flex: 1 1 300px;
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.review img,
+#profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.stars {
+    color: gold;
+}
+
+
+/* Footer Styles */
+
+footer {
+    background: #023e8a;
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1 1 250px;
+    margin-bottom: 20px;
+}
+
+.footer-section a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
